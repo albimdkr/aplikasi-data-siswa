@@ -92,46 +92,26 @@ require_once "helper/fungsi_tanggal_indo.php";
     </header>
 
     <!-- Main Content -->
-        <div class="container-fluid px-4 py-5 my-5 text-center">
-            <div class="lc-block mb-4">
-                <div editable="rich">
-                    <h2 class="display-2 fw-bold">Aplikasi <span class="text-color">Data Siswa</span></h2>
-                </div>
-            </div>
-            <div class="lc-block col-lg-6 mx-auto mb-5">
-                <div editable="rich">
-                    <p class="lead">Develop By Kelompok 01 - Forensic Network Security</p>
-                    <p class="lead">Universita Teknologi Bandung</p>
-                </div>
-            </div>
-    
-            <div class="lc-block d-grid gap-2 d-sm-flex justify-content-sm-center mb-5"> <a class="btn btn-primary btn-lg px-4 gap-3" href="login.php" role="button">Login</a>
-                <a class="btn btn-outline-secondary btn-lg px-4" href="#about" role="button">Tentang</a>
-            </div>
-            <div class="lc-block d-grid gap-2 d-sm-flex justify-content-sm-center">
-                <img class="img-fluid" src="assets/img/realtimesvg.svg" width="" height="783" srcset="" sizes="" alt="">
+    <div class="container-fluid px-4 py-5 my-5 text-center">
+        <div class="lc-block mb-4">
+            <div editable="rich">
+                <h2 class="display-2 fw-bold">Aplikasi <span class="text-color">Data Siswa</span></h2>
             </div>
         </div>
-    <!-- <main class="form-signin w-100 m-10">
-    <form action="login_action.php" method="POST">
-      <h1 class="h3 mb-3 fw-normal text-center">Login</h1>
-      <div class="form-floating">
-        <input type="email" class="form-control" id="floatingInputEmail" name="email" placeholder="johndoe@example.com">
-        <label for="floatingInputEmail">Email</label>
-      </div>
-      <div class="form-floating">
-        <input type="password" class="form-control" id="floatingPassword" name="password" placeholder="Password">
-        <label for="floatingPassword">Password</label>
-      </div>
-      <div class="form-check text-start my-3">
-        <input class="form-check-input" type="checkbox" value="remember-me" id="flexCheckDefault">
-        <label class="form-check-label" for="flexCheckDefault">
-          Remember me
-        </label>
-      </div>
-      <button class="btn btn-primary w-100 py-2" type="submit">Login</button>
-    </form>
-    </main> -->
+        <div class="lc-block col-lg-6 mx-auto mb-5">
+            <div editable="rich">
+                <p class="lead">Develop By Kelompok 01 - Forensic Network Security</p>
+                <p class="lead">Universitas Teknologi Bandung</p>
+            </div>
+        </div>
+
+        <div class="lc-block d-grid gap-2 d-sm-flex justify-content-sm-center mb-5"> <a class="btn btn-primary btn-lg px-4 gap-3" href="login.php" role="button">Login</a>
+            <a class="btn btn-outline-secondary btn-lg px-4" href="#about" role="button">Tentang</a>
+        </div>
+        <div class="lc-block d-grid gap-2 d-sm-flex justify-content-sm-center">
+            <img class="img-fluid" src="assets/img/realtimesvg.svg" width="" height="783" srcset="" sizes="" alt="">
+        </div>
+    </div>
 
     <!-- Footer -->
     <footer class="footer mt-auto bg-white shadow py-4">

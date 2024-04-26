@@ -37,7 +37,7 @@ require_once "helper/fungsi_tanggal_indo.php";
     <style>
       .form-signin {
         max-width: 330px;
-        margin-top: 13%;
+        margin-top: 7%;
         margin-inline: auto;
         
       }
@@ -100,7 +100,7 @@ require_once "helper/fungsi_tanggal_indo.php";
                         <a class="nav-link mx-2" href="data_siswa.php">Data</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link mx-2" href="logout_action.php">Logout</a>
+                        <a class="nav-link mx-2" href="logout_action.php" onclick="confirmLogout()">Logout</a>
                     </li>
                 </ul>
                 </div>

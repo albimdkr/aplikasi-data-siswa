@@ -4,7 +4,7 @@ session_start();
 // Periksa apakah pengguna belum login
 if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true) {
     // Jika belum login, arahkan kembali ke halaman login
-    header("Location: index.php");
+    header("Location: login.php");
     exit();
 }
 ?>

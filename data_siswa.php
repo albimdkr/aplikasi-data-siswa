@@ -5,8 +5,9 @@ require_once "config/database.php";
 require_once "helper/fungsi_tanggal_indo.php";
 
 // Session
-if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true) {
-    header("Location: dashboard.php");
+session_start();
+if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true) {
+    header("Location: login.php");
     exit();
 }
 ?>
@@ -64,7 +65,7 @@ if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true) {
                         <a class="nav-link mx-2" href="data_siswa.php">Data</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link mx-2" href="logout_action.php">Logout</a>
+                    <a class="nav-link mx-2" href="logout_action.php" onclick="confirmLogout()">Logout</a>
                     </li>
                 </ul>
                 </div>
@@ -129,6 +130,7 @@ if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true) {
     <!-- Custom Scripts -->
     <script src="assets/js/flatpickr.js"></script>
     <script src="assets/js/form-validation.js"></script>
+    <script src="assets/js/script.js"></script>
 </body>
 
 </html>
