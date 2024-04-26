@@ -13,7 +13,7 @@ require_once "helper/fungsi_tanggal_indo.php";
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Aplikasi Data Siswa">
-    <meta name="author" content="Indra Styawantoro">
+    <meta name="author" content="Albi Mudakar Nasyabi">
 
     <!-- Title -->
     <title>Register | Aplikasi Data Siswa</title>
