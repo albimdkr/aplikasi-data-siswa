@@ -37,7 +37,7 @@ if (isset($_POST['simpan'])) {
         // jika proses insert berhasil
         if ($insert) {
             // alihkan ke halaman data siswa dan tampilkan pesan berhasil simpan data
-            header('location: index.php?halaman=data&pesan=1');
+            header('location: dashboard.php?halaman=data&pesan=1');
         }
     }
 }

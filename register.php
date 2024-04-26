@@ -16,7 +16,7 @@ require_once "helper/fungsi_tanggal_indo.php";
     <meta name="author" content="Indra Styawantoro">
 
     <!-- Title -->
-    <title>Login | Aplikasi Data Siswa</title>
+    <title>Register | Aplikasi Data Siswa</title>
 
     <!-- Favicon icon -->
     <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
@@ -76,8 +76,8 @@ require_once "helper/fungsi_tanggal_indo.php";
                     Aplikasi Data <span class="d-none d-md-inline">Siswa</span>
                 </span>
                 <span class="navbar-brand text-white">
-                    <a href="register.php" class="anchor-logout">
-                        Register
+                    <a href="index.php" class="anchor-logout">
+                        Login
                     </a>
                 </span>
             </div>
@@ -86,24 +86,23 @@ require_once "helper/fungsi_tanggal_indo.php";
 
     <!-- Main Content -->
     <main class="form-signin w-100 m-10">
-    <form action="login_action.php" method="POST">
-      <h1 class="h3 mb-3 fw-normal text-center">Login</h1>
-      <div class="form-floating">
-        <input type="email" class="form-control" id="floatingInputEmail" name="email" placeholder="johndoe@example.com">
-        <label for="floatingInputEmail">Email</label>
-      </div>
-      <div class="form-floating">
-        <input type="password" class="form-control" id="floatingPassword" name="password" placeholder="Password">
-        <label for="floatingPassword">Password</label>
-      </div>
-      <div class="form-check text-start my-3">
-        <input class="form-check-input" type="checkbox" value="remember-me" id="flexCheckDefault">
-        <label class="form-check-label" for="flexCheckDefault">
-          Remember me
-        </label>
-      </div>
-      <button class="btn btn-primary w-100 py-2" type="submit">Login</button>
-    </form>
+        <form action="register_action.php" method="POST">
+            <h1 class="h3 mb-3 fw-normal text-center">Register Akun</h1>
+
+            <div class="form-floating">
+                <input type="text" class="form-control" id="floatingInputNama" name="nama" placeholder="John Doe">
+                <label for="floatingInputNama">Nama</label>
+            </div>
+            <div class="form-floating">
+                <input type="email" class="form-control" id="floatingInputEmail" name="email" placeholder="johndoe@example.com">
+                <label for="floatingInputEmail">Email</label>
+            </div>
+            <div class="form-floating">
+                <input type="password" class="form-control" id="floatingPassword" name="password" placeholder="Password">
+                <label for="floatingPassword">Password</label>
+            </div>
+            <button class="btn btn-primary w-100 py-2" type="submit">Register</button>
+        </form>
     </main>
 
     <!-- Footer -->

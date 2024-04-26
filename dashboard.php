@@ -16,7 +16,7 @@ require_once "helper/fungsi_tanggal_indo.php";
     <meta name="author" content="Indra Styawantoro">
 
     <!-- Title -->
-    <title>Login | Aplikasi Data Siswa</title>
+    <title>Dashboard | Aplikasi Data Siswa</title>
 
     <!-- Favicon icon -->
     <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
@@ -33,32 +33,8 @@ require_once "helper/fungsi_tanggal_indo.php";
 
     <!-- Template CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
-
     <style>
-      .form-signin {
-        max-width: 330px;
-        margin-top: 13%;
-        margin-inline: auto;
-        
-      }
-
-      .form-signin .form-floating:focus-within {
-        z-index: 2;
-      }
-
-      .form-signin input[type="email"] {
-        margin-bottom: -1px;
-        border-bottom-right-radius: 0;
-        border-bottom-left-radius: 0;
-      }
-
-      .form-signin input[type="password"] {
-        margin-bottom: 10px;
-        border-top-left-radius: 0;
-        border-top-right-radius: 0;
-      }
-
-      .anchor-logout {
+        .anchor-logout {
             text-decoration: none;
             color: #fff;
         }
@@ -76,8 +52,8 @@ require_once "helper/fungsi_tanggal_indo.php";
                     Aplikasi Data <span class="d-none d-md-inline">Siswa</span>
                 </span>
                 <span class="navbar-brand text-white">
-                    <a href="register.php" class="anchor-logout">
-                        Register
+                    <a href="logout_action.php" class="anchor-logout">
+                        Logout
                     </a>
                 </span>
             </div>
@@ -85,25 +61,37 @@ require_once "helper/fungsi_tanggal_indo.php";
     </header>
 
     <!-- Main Content -->
-    <main class="form-signin w-100 m-10">
-    <form action="login_action.php" method="POST">
-      <h1 class="h3 mb-3 fw-normal text-center">Login</h1>
-      <div class="form-floating">
-        <input type="email" class="form-control" id="floatingInputEmail" name="email" placeholder="johndoe@example.com">
-        <label for="floatingInputEmail">Email</label>
-      </div>
-      <div class="form-floating">
-        <input type="password" class="form-control" id="floatingPassword" name="password" placeholder="Password">
-        <label for="floatingPassword">Password</label>
-      </div>
-      <div class="form-check text-start my-3">
-        <input class="form-check-input" type="checkbox" value="remember-me" id="flexCheckDefault">
-        <label class="form-check-label" for="flexCheckDefault">
-          Remember me
-        </label>
-      </div>
-      <button class="btn btn-primary w-100 py-2" type="submit">Login</button>
-    </form>
+    <main class="flex-shrink-0">
+        <div class="container pt-5">
+            <?php
+            // pemanggilan file konten sesuai "halaman" yang dipilih
+            // jika tidak ada halaman yang dipilih atau halaman yang dipilih "data"
+            if (empty($_GET["halaman"]) || $_GET['halaman'] == 'data') {
+                // panggil file tampil data
+                include "tampil_data.php";
+            }
+            // jika halaman yang dipilih "entri"
+            elseif ($_GET['halaman'] == 'entri') {
+                // panggil file form entri
+                include "form_entri.php";
+            }
+            // jika halaman yang dipilih "ubah"
+            elseif ($_GET['halaman'] == 'ubah') {
+                // panggil file form ubah
+                include "form_ubah.php";
+            }
+            // jika halaman yang dipilih "detail"
+            elseif ($_GET['halaman'] == 'detail') {
+                // panggil file tampil detail
+                include "tampil_detail.php";
+            }
+            // jika halaman yang dipilih "pencarian"
+            elseif ($_GET['halaman'] == 'pencarian') {
+                // panggil file tampil pencarian
+                include "tampil_pencarian.php";
+            }
+            ?>
+        </div>
     </main>
 
     <!-- Footer -->

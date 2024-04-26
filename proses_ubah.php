@@ -38,7 +38,7 @@ if (isset($_POST['simpan'])) {
         // jika proses update berhasil
         if ($update) {
             // alihkan ke halaman data siswa dan tampilkan pesan berhasil ubah data
-            header('location: index.php?halaman=data&pesan=2');
+            header('location: dashboard.php?halaman=data&pesan=2');
         }
     }
     // jika data foto ada (foto diubah)
@@ -55,7 +55,7 @@ if (isset($_POST['simpan'])) {
             // jika proses update berhasil
             if ($update) {
                 // alihkan ke halaman data siswa dan tampilkan pesan berhasil ubah data
-                header('location: index.php?halaman=data&pesan=2');
+                header('location: dashboard.php?halaman=data&pesan=2');
             }
         }
     }
