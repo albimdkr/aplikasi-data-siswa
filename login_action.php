@@ -19,7 +19,6 @@ if (mysqli_num_rows($result) > 0 ) {
     header("Location: dashboard.php");
     exit();
 } else {
-    echo "<center><h1>Email atau Password anda salah!</h1>
-            <button><strong><a href='index.php'>Login</a><strong/></button></center>";
+    echo '<script>alert("Email Atau Password Tidak Sesuai!"); window.location.href = "login.php";</script>';
 }
 ?>
