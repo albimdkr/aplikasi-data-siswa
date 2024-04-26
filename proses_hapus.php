@@ -32,6 +32,6 @@ if (isset($_GET['id'])) {
     // jika proses delete berhasil
     if ($delete) {
         // alihkan ke halaman data siswa dan tampilkan pesan berhasil hapus data
-        header('location: dashboard.php?halaman=data&pesan=3');
+        header('location: data_siswa.php?halaman=data&pesan=3');
     }
 }

@@ -22,7 +22,7 @@ if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true) {
     <meta name="author" content="Indra Styawantoro">
 
     <!-- Title -->
-    <title>Dashboard | Aplikasi Data Siswa</title>
+    <title>Data Siswa | Aplikasi Data Siswa</title>
 
     <!-- Favicon icon -->
     <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
@@ -40,9 +40,6 @@ if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true) {
     <!-- Template CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
     <style>
-        .container-content {
-            margin-top: 10em;
-        }
         .anchor-logout {
             text-decoration: none;
             color: #fff;
@@ -53,42 +50,59 @@ if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true) {
 <body class="d-flex flex-column h-100">
     <!-- Header -->
     <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-primary p-3">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="dashboard.php">
-                <i class="fa-solid fa-book"></i>
-                DATA SISWA</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class=" collapse navbar-collapse" id="navbarNavDropdown">
-                <ul class="navbar-nav ms-auto ">
-                    <li class="nav-item">
-                        <a class="nav-link mx-2" href="data_siswa.php">Data</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link mx-2" href="logout_action.php">Logout</a>
-                    </li>
-                </ul>
-                </div>
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg fixed-top bg-primary shadow">
+            <div class="container">
+                <span class="navbar-brand text-white">
+                    <i class="fa-solid fa-laptop-code me-2"></i>
+                    Aplikasi Data <span class="d-none d-md-inline">Siswa</span>
+                </span>
+                <span class="navbar-brand text-white">
+                    <a href="logout_action.php" class="anchor-logout">
+                        Logout
+                    </a>
+                </span>
             </div>
         </nav>
     </header>
 
-    <div class="container-content">
-        <div class="row">
-            <div class="col-6 mx-auto">
-                <div class="card">
-                    <div class="card-body">
-                    <div class="container m-10">
-                        <h1>Selamat Datang</h1>
-                        <p>User</p>
-                    </div>
-                    </div>
-                </div>
-            </div>
+    <!-- Main Content -->
+    <main class="flex-shrink-0">
+        <div class="container pt-5">
+            <?php
+            // pemanggilan file konten sesuai "halaman" yang dipilih
+            // jika tidak ada halaman yang dipilih atau halaman yang dipilih "data"
+            if (empty($_GET["halaman"]) || $_GET['halaman'] == 'data') {
+                // panggil file tampil data
+                include "tampil_data.php";
+            }
+            // jika halaman yang dipilih "entri"
+            elseif ($_GET['halaman'] == 'entri') {
+                // panggil file form entri
+                include "form_entri.php";
+            }
+            // jika halaman yang dipilih "ubah"
+            elseif ($_GET['halaman'] == 'ubah') {
+                // panggil file form ubah
+                include "form_ubah.php";
+            }
+            // jika halaman yang dipilih "detail"
+            elseif ($_GET['halaman'] == 'detail') {
+                // panggil file tampil detail
+                include "tampil_detail.php";
+            }
+            // jika halaman yang dipilih "pencarian"
+            elseif ($_GET['halaman'] == 'pencarian') {
+                // panggil file tampil pencarian
+                include "tampil_pencarian.php";
+            }
+            else {
+                http_response_code(404);
+                include "404.php";
+            }
+            ?>
         </div>
-    </div>
+    </main>
 
     <!-- Footer -->
     <footer class="footer mt-auto bg-white shadow py-4">
