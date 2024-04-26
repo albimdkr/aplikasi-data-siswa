@@ -1,3 +1,15 @@
+<?php
+session_start();
+
+// Periksa apakah pengguna belum login
+if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true) {
+    // Jika belum login, arahkan kembali ke halaman login
+    header("Location: index.php");
+    exit();
+}
+?>
+
+
 <div class="d-flex flex-column flex-lg-row mt-5 mb-4">
     <!-- judul halaman -->
     <div class="flex-grow-1 d-flex align-items-center">

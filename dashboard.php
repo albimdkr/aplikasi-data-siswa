@@ -3,6 +3,12 @@
 require_once "config/database.php";
 // panggil file "fungsi_tanggal_indo.php" untuk membuat format tanggal indonesia
 require_once "helper/fungsi_tanggal_indo.php";
+
+// Session
+if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true) {
+    header("Location: dashboard.php");
+    exit();
+}
 ?>
 
 <!DOCTYPE html>
