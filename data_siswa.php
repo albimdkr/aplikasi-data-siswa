@@ -65,7 +65,7 @@ if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true) {
                         <a class="nav-link mx-2" href="data_siswa.php">Data</a>
                     </li>
                     <li class="nav-item">
-                    <a class="nav-link mx-2" href="logout_action.php" onclick="confirmLogout()">Logout</a>
+                        <a class="nav-link mx-2" onclick="confirmLogout()" style="cursor: pointer;">Logout</a>
                     </li>
                 </ul>
                 </div>
@@ -131,6 +131,14 @@ if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true) {
     <script src="assets/js/flatpickr.js"></script>
     <script src="assets/js/form-validation.js"></script>
     <script src="assets/js/script.js"></script>
+    <script>
+        function confirmLogout() {
+            if (confirm("Apakah Anda yakin ingin logout?")) {
+                window.location.href = "logout_action.php";
+            } 
+            return false;
+        }
+    </script>
 </body>
 
 </html>
