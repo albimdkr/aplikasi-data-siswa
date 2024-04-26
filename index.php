@@ -1,14 +1,3 @@
-<!-- Aplikasi CRUD dengan PHP 8, MySQL 8, Bootstrap 5, dan Vanilla JS
-**********************************************************************
-* Developer   : Indra Styawantoro
-* Company     : Pustaka Koding
-* Release     : Maret 2023
-* Update      : -
-* Website     : pustakakoding.com
-* E-mail      : pustaka.koding@gmail.com
-* WhatsApp    : +62-813-7778-3334
--->
-
 <?php
 // panggil file "database.php" untuk koneksi ke database
 require_once "config/database.php";
@@ -23,11 +12,11 @@ require_once "helper/fungsi_tanggal_indo.php";
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Aplikasi CRUD dengan PHP 8, MySQL 8, Bootstrap 5, dan Vanilla JS">
+    <meta name="description" content="Aplikasi Data Siswa">
     <meta name="author" content="Indra Styawantoro">
 
     <!-- Title -->
-    <title>Aplikasi CRUD dengan PHP 8, MySQL 8, Bootstrap 5, dan Vanilla JS</title>
+    <title>Aplikasi Data Siswa</title>
 
     <!-- Favicon icon -->
     <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
@@ -54,7 +43,7 @@ require_once "helper/fungsi_tanggal_indo.php";
             <div class="container">
                 <span class="navbar-brand text-white">
                     <i class="fa-solid fa-laptop-code me-2"></i>
-                    Aplikasi CRUD <span class="d-none d-md-inline">dengan PHP 8, MySQL 8, Bootstrap 5, dan Vanilla JS</span>
+                    Aplikasi Data <span class="d-none d-md-inline">Siswa</span>
                 </span>
             </div>
         </nav>
@@ -99,7 +88,7 @@ require_once "helper/fungsi_tanggal_indo.php";
         <div class="container">
             <!-- copyright -->
             <div class="copyright text-center mb-2 mb-md-0">
-                &copy; 2023 - <a href="https://pustakakoding.com/" target="_blank" class="text-brand text-decoration-none">Pustaka Koding</a>. All rights reserved.
+                &copy; 2024 - <a href="" target="_blank" class="text-brand text-decoration-none">Kelompok 01</a>
             </div>
         </div>
     </footer>
