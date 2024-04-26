@@ -83,7 +83,7 @@ require_once "helper/fungsi_tanggal_indo.php";
                 <div class=" collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav ms-auto ">
                     <li class="nav-item">
-                        <a class="nav-link mx-2" href="#">Kontak</a>
+                        <a class="nav-link mx-2" onclick="alert('Hubungi pihak admin sekolah anda, Terima Kasih.')" style="cursor: pointer;">Registrasi Akun</a>
                     </li>
                 </ul>
                 </div>
