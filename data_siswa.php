@@ -70,7 +70,7 @@ if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true) {
                 </div>
             </div>
         </nav>
-
+    </header>
     <!-- Main Content -->
     <main class="flex-shrink-0">
         <div class="container pt-5">
