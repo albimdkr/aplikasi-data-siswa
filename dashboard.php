@@ -19,7 +19,7 @@ if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true) {
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Aplikasi Data Siswa">
-    <meta name="author" content="Indra Styawantoro">
+    <meta name="author" content="Albi Mudakar Nasyabi">
 
     <!-- Title -->
     <title>Dashboard | Aplikasi Data Siswa</title>

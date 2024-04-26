@@ -50,21 +50,26 @@ if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true) {
 <body class="d-flex flex-column h-100">
     <!-- Header -->
     <header>
-        <!-- Navbar -->
-        <nav class="navbar navbar-expand-lg fixed-top bg-primary shadow">
-            <div class="container">
-                <span class="navbar-brand text-white">
-                    <i class="fa-solid fa-laptop-code me-2"></i>
-                    Aplikasi Data <span class="d-none d-md-inline">Siswa</span>
-                </span>
-                <span class="navbar-brand text-white">
-                    <a href="logout_action.php" class="anchor-logout">
-                        Logout
-                    </a>
-                </span>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary p-3">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="dashboard.php">
+                <i class="fa-solid fa-book"></i>
+                DATA SISWA</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class=" collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav ms-auto ">
+                    <li class="nav-item">
+                        <a class="nav-link mx-2" href="data_siswa.php">Data</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mx-2" href="logout_action.php">Logout</a>
+                    </li>
+                </ul>
+                </div>
             </div>
         </nav>
-    </header>
 
     <!-- Main Content -->
     <main class="flex-shrink-0">
