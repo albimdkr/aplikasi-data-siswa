@@ -68,18 +68,21 @@ require_once "helper/fungsi_tanggal_indo.php";
 <body class="d-flex flex-column h-100">
     <!-- Header -->
     <header>
-        <!-- Navbar -->
-        <nav class="navbar navbar-expand-lg fixed-top bg-primary shadow">
-            <div class="container">
-                <span class="navbar-brand text-white">
-                    <i class="fa-solid fa-laptop-code me-2"></i>
-                    Aplikasi Data <span class="d-none d-md-inline">Siswa</span>
-                </span>
-                <span class="navbar-brand text-white">
-                    <a href="register.php" class="anchor-logout">
-                        Register
-                    </a>
-                </span>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary p-3">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.php">
+                <i class="fa-solid fa-book"></i>
+                DATA SISWA</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class=" collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav ms-auto ">
+                    <li class="nav-item">
+                        <a class="nav-link mx-2" href="index.php">Login</a>
+                    </li>
+                </ul>
+                </div>
             </div>
         </nav>
     </header>
