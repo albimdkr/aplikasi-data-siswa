@@ -46,10 +46,19 @@ require_once "helper/fungsi_tanggal_indo.php";
         z-index: 2;
       }
 
+
+      .form-signin input[type="text"] {
+        margin-bottom: -1px;
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
+      }
+
       .form-signin input[type="email"] {
         margin-bottom: -1px;
         border-bottom-right-radius: 0;
         border-bottom-left-radius: 0;
+        border-top-right-radius: 0;
+        border-top-left-radius: 0;
       }
 
       .form-signin input[type="password"] {
@@ -88,7 +97,6 @@ require_once "helper/fungsi_tanggal_indo.php";
     <main class="form-signin w-100 m-10">
         <form action="register_action.php" method="POST">
             <h1 class="h3 mb-3 fw-normal text-center">Register Akun</h1>
-
             <div class="form-floating">
                 <input type="text" class="form-control" id="floatingInputNama" name="nama" placeholder="John Doe">
                 <label for="floatingInputNama">Nama</label>

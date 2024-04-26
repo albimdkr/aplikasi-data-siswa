@@ -3,12 +3,6 @@
 require_once "config/database.php";
 // panggil file "fungsi_tanggal_indo.php" untuk membuat format tanggal indonesia
 require_once "helper/fungsi_tanggal_indo.php";
-
-// Session
-if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true) {
-    header("Location: dashboard.php");
-    exit();
-}
 ?>
 
 <!DOCTYPE html>
@@ -22,7 +16,7 @@ if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true) {
     <meta name="author" content="Indra Styawantoro">
 
     <!-- Title -->
-    <title>Dashboard | Aplikasi Data Siswa</title>
+    <title>404 | Aplikasi Data Siswa</title>
 
     <!-- Favicon icon -->
     <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
@@ -39,10 +33,11 @@ if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true) {
 
     <!-- Template CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
+
     <style>
-        .anchor-logout {
-            text-decoration: none;
-            color: #fff;
+        .container-404 {
+            margin-top: 15em;
+            text-align: center;
         }
     </style>
 </head>
@@ -57,52 +52,27 @@ if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true) {
                     <i class="fa-solid fa-laptop-code me-2"></i>
                     Aplikasi Data <span class="d-none d-md-inline">Siswa</span>
                 </span>
-                <span class="navbar-brand text-white">
-                    <a href="logout_action.php" class="anchor-logout">
-                        Logout
-                    </a>
-                </span>
             </div>
         </nav>
     </header>
 
-    <!-- Main Content -->
-    <main class="flex-shrink-0">
-        <div class="container pt-5">
-            <?php
-            // pemanggilan file konten sesuai "halaman" yang dipilih
-            // jika tidak ada halaman yang dipilih atau halaman yang dipilih "data"
-            if (empty($_GET["halaman"]) || $_GET['halaman'] == 'data') {
-                // panggil file tampil data
-                include "tampil_data.php";
-            }
-            // jika halaman yang dipilih "entri"
-            elseif ($_GET['halaman'] == 'entri') {
-                // panggil file form entri
-                include "form_entri.php";
-            }
-            // jika halaman yang dipilih "ubah"
-            elseif ($_GET['halaman'] == 'ubah') {
-                // panggil file form ubah
-                include "form_ubah.php";
-            }
-            // jika halaman yang dipilih "detail"
-            elseif ($_GET['halaman'] == 'detail') {
-                // panggil file tampil detail
-                include "tampil_detail.php";
-            }
-            // jika halaman yang dipilih "pencarian"
-            elseif ($_GET['halaman'] == 'pencarian') {
-                // panggil file tampil pencarian
-                include "tampil_pencarian.php";
-            }
-            else {
-                http_response_code(404);
-                include "404.php";
-            }
-            ?>
+
+    <div class="container-404">
+        <div class="row">
+            <div class="col-6 mx-auto">
+                <div class="card">
+                    <div class="card-body">
+                    <div class="container m-10">
+                        <h1>404 Not Found</h1>
+                        <p>Halaman Yang Anda Tuju, Tidak Di Temukan!</p>
+                    </div>
+                    </div>
+                </div>
+            </div>
         </div>
-    </main>
+    </div>
+
+
 
     <!-- Footer -->
     <footer class="footer mt-auto bg-white shadow py-4">

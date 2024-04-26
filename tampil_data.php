@@ -9,7 +9,7 @@ if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true) {
 }
 ?>
 
-<div class="d-flex flex-column flex-lg-row mt-5 mb-4">
+<div class="d-flex flex-column flex-lg-row mt-5 mb-4"> 
     <!-- judul halaman -->
     <div class="flex-grow-1 d-flex align-items-center">
         <i class="fa-regular fa-user icon-title"></i>

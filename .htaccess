@@ -1,0 +1,4 @@
+ErrorDocument 404 /aplikasi-data-siswa/404.php
+ErrorDocument 403 /aplikasi-data-siswa/403.php
+ErrorDocument 500 /aplikasi-data-siswa/500.php
+
