@@ -62,7 +62,16 @@ require_once "helper/fungsi_tanggal_indo.php";
       }
 
       .form-signin input[type="password"] {
+        margin-bottom: 2px;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+      }
+
+      .dropdown {
+        height: 50px;
         margin-bottom: 10px;
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
         border-top-left-radius: 0;
         border-top-right-radius: 0;
       }
@@ -109,6 +118,14 @@ require_once "helper/fungsi_tanggal_indo.php";
                 <input type="password" class="form-control" id="floatingPassword" name="password" placeholder="Password">
                 <label for="floatingPassword">Password</label>
             </div>
+            <div class="form-floating">
+            <div class="dropdown">
+                <select class="form-select" aria-label="">
+                    <option selected> --Pilih Peran-- </option>
+                    <option value="Guru">Pengajar</option>
+                    <option value="Operator">Operator</option>
+                </select>
+            </div>
             <button class="btn btn-primary w-100 py-2" type="submit">Register</button>
         </form>
     </main>
@@ -133,6 +150,7 @@ require_once "helper/fungsi_tanggal_indo.php";
     <!-- Custom Scripts -->
     <script src="assets/js/flatpickr.js"></script>
     <script src="assets/js/form-validation.js"></script>
+    <script src="assets/js/script.js"></script>
 </body>
 
 </html>
