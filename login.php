@@ -1,8 +1,9 @@
 <?php
-// panggil file "database.php" untuk koneksi ke database
 require_once "config/database.php";
-// panggil file "fungsi_tanggal_indo.php" untuk membuat format tanggal indonesia
 require_once "helper/fungsi_tanggal_indo.php";
+
+$nama = isset($_SESSION["nama"]) ? $_SESSION["nama"] : '';
+$role = isset($_SESSION["role"]) ? $_SESSION["role"] : '';
 ?>
 
 <!DOCTYPE html>

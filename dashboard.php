@@ -1,7 +1,5 @@
 <?php
-// panggil file "database.php" untuk koneksi ke database
 require_once "config/database.php";
-// panggil file "fungsi_tanggal_indo.php" untuk membuat format tanggal indonesia
 require_once "helper/fungsi_tanggal_indo.php";
 
 // Session
@@ -12,6 +10,10 @@ if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true) {
     header("Location: login.php");
     exit();
 }
+
+// ambil data user session
+$nama = $_SESSION["nama"];
+$role = $_SESSION["role"];
 ?>
 
 <!DOCTYPE html>
@@ -50,6 +52,9 @@ if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true) {
             text-decoration: none;
             color: #fff;
         }
+        .username {
+            color: #4E73DF;
+        }
     </style>
 </head>
 
@@ -84,8 +89,8 @@ if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true) {
                 <div class="card">
                     <div class="card-body">
                     <div class="container m-10">
-                        <h1>Selamat Datang</h1>
-                        <p>User</p>
+                        <h1>Selamat Datang, <span class="username"><?php echo $nama; ?></span></h1>
+                        <p>Role: <?php echo $role; ?></p>
                     </div>
                     </div>
                 </div>
