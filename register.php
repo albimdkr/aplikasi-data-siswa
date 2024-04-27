@@ -1,8 +1,21 @@
 <?php
-// panggil file "database.php" untuk koneksi ke database
 require_once "config/database.php";
-// panggil file "fungsi_tanggal_indo.php" untuk membuat format tanggal indonesia
 require_once "helper/fungsi_tanggal_indo.php";
+
+// Session
+session_start();
+
+// Chekck Auth
+if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true) {
+    header("Location: login.php");
+    exit();
+}
+
+// Chek Role: Only admin
+if ($_SESSION['role'] !== 'Admin') {
+    header("Location: 403.php");
+    exit();
+}
 ?>
 
 <!DOCTYPE html>
@@ -94,19 +107,23 @@ require_once "helper/fungsi_tanggal_indo.php";
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class=" collapse navbar-collapse" id="navbarNavDropdown">
-                <ul class="navbar-nav ms-auto ">
-                    <li class="nav-item">
-                        <a class="nav-link mx-2" href="data_siswa.php">Data</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link mx-2" href="logout_action.php" onclick="confirmLogout()">Logout</a>
-                    </li>
-                </ul>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav ms-auto">
+                        <?php if ($_SESSION['role'] === 'Admin') { ?>
+                            <li class="nav-item">
+                                <a class="nav-link mx-2" href="register.php">User</a>
+                            </li>
+                        <?php } ?>
+                        <li class="nav-item">
+                            <a class="nav-link mx-2" href="data_siswa.php">Siswa</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mx-2" onclick="confirmLogout()" style="cursor: pointer;">Logout</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </nav>
-    </header>
     </header>
 
     <!-- Main Content -->

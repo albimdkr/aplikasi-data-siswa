@@ -17,13 +17,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $result = mysqli_query($mysqli, $query_sql);
 
         if ($result) {
-            header("Location: index.php");
-            exit();
+            echo '<script>alert("User berhasil ditambahkan!"); window.location.href = "register.php";</script>';
         } else {
             echo "Register Gagal: " . mysqli_error($mysqli);
         }
     } else {
-        echo "Harap lengkapi semua field.";
+        echo '<script>alert("Gagal, Harap lengkapi semua form!"); window.location.href = "register.php";</script>';
     }
 }
 

@@ -69,19 +69,25 @@ $role = $_SESSION["role"];
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class=" collapse navbar-collapse" id="navbarNavDropdown">
-                <ul class="navbar-nav ms-auto ">
-                    <li class="nav-item">
-                        <a class="nav-link mx-2" href="data_siswa.php">Data</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link mx-2" onclick="confirmLogout()" style="cursor: pointer;">Logout</a>
-                    </li>
-                </ul>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav ms-auto">
+                        <?php if ($_SESSION['role'] === 'Admin') { ?>
+                            <li class="nav-item">
+                                <a class="nav-link mx-2" href="register.php">User</a>
+                            </li>
+                        <?php } ?>
+                        <li class="nav-item">
+                            <a class="nav-link mx-2" href="data_siswa.php">Siswa</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mx-2" onclick="confirmLogout()" style="cursor: pointer;">Logout</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </nav>
     </header>
+
 
     <div class="container-content">
         <div class="row">
