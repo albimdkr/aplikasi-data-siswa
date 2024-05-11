@@ -13,10 +13,10 @@ Tech💻
 
 Anggota🙍‍♂️
 
-- Aditya Rizki Maulana - 21552011299 (Lead)
-- Akbar Darmawan - 23552012005 (Researcher Paper & Writer)
-- Albi Mudakar Nasyabi - 21552011304 (Developer & Pentest)
-- Aldi Ardyansyah - 21552011236 (Writer)
-- Alfridus Elman - 21552011304 (Writer)
+- Akbar Darmawan - 23552012005 (Lead)
+- Albi Mudakar Nasyabi - 21552011304 (Penetration Testing)
+- Aldi Ardyansyah - 21552011236 (Developement)
+- Aditya Rizki Maulana - 21552011299 (Deployment)
+- Alfridus Elman - 21552011304 (System Analys)
 
 Template Code By: [Pustaka Coding](https://github.com/pustakakoding/aplikasi-crud-php8-mysql8-bootstrap5-vanillajs)
