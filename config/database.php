@@ -5,6 +5,12 @@ $username = "root";
 $password = "";
 $database = "db_siswa";
 
+// env: prod
+// $host     = "sql101.infinityfree.com";            
+// $username = "if0_36443573";
+// $password = "hueEksiFvXwMeUP";
+// $database = "if0_36443573_db_siswa";
+
 // buat koneksi database
 $mysqli = new mysqli($host, $username, $password, $database);
 
