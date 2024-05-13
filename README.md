@@ -14,9 +14,10 @@ Tech💻
 Anggota🙍‍♂️
 
 - Akbar Darmawan - 23552012005 (Lead)
-- Albi Mudakar Nasyabi - 21552011304 (Penetration Testing)
+- Albi Mudakar Nasyabi - 21552011235 (Penetration Testing)
 - Aldi Ardyansyah - 21552011236 (Developement)
 - Aditya Rizki Maulana - 21552011299 (Deployment)
 - Alfridus Elman - 21552011304 (System Analys)
 
+Aplikasi Data Siswa: [Documentation-v1](https://github.com/albimdkr/aplikasi-data-siswa/blob/master/Documentation-v1.txt)
 Template Code By: [Pustaka Coding](https://github.com/pustakakoding/aplikasi-crud-php8-mysql8-bootstrap5-vanillajs)
